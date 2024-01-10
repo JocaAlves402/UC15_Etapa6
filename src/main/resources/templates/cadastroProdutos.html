@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Salgados, comida, laches, fastfood.">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+    <title>Cadastro</title>
+    
+</head>
+<body>
+    <header>
+    <div class="container"> 
+        <div class="cabecalho"> 
+            <div style="background-color: rgb(255, 255, 255);" class="col-md-6" > 
+                <p><img src="imagens/logo.png"width="200px"/></p> 
+            </div> 
+            <div style="background-color: rgb(255, 255, 255);" class="col-md-6"> 
+                <p><img src="imagens/IconeUsuario.png" width="30px"/><img src="imagens/iconeSaida.webp" width="60px"/></p> 
+            </div> 
+        </div> 
+    </div> 
+</header>
+<nav>
+    <div class="container"> 
+        <div class="menu"> 
+            <div style="background-color: rgb(255, 255, 255);" class="col-md-12"> 
+                <div class="dropdown"><a href="SN Salgados.html">Home</a></div>
+                <div class="dropdown"><a href="#">Cadastrar Produtos</a></div> 
+                <div class="dropdown"><a href="listaProdutos.html">Lista de Produtos</a></div>
+                <div class="dropdown"><a href="#">Relatório de Venda</a></div>
+            </div> 
+        </div>  
+    </div>
+</nav>
+<main>
+    <div class="container"> 
+        
+        <div class="principal"> 
+            <div style="background-color: rgb(255, 255, 255);" class="col-md-4" > 
+                <h4>Cadastro de Produtos</h4>
+                <div class="right"></div>
+            </div>
+            <div style="background-color: rgb(255, 255, 255);" class="col-md-4" > 
+                <h4>Selecione o tipo de produto para cadastrar</h4>
+                
+                <br><br>
+                <input class="radB" type="radio" id="salgados" name="opcao-pg" value="Salgados">
+                <label for="salgados">Salgados</label>
+                &nbsp;&nbsp;
+                <input class="radB" type="radio" id="sobremesa" name="opcao-pg" value="Sobremesa">
+                <label for="sobremesa">Sobremesas</label>
+                <br><br>
+                  <div class="buttons">
+                    <button type="button" class="effect effect-1" id="infoVal" onclick="inserirDados()">Cadastro</button>
+                  </div>
+            </div> 
+            <div style="background-color: rgb(255, 255, 255);" class="col-md-4"> 
+                <form action="" method="post" id="opcaoSalgados" style="display: none;">
+                    <h4><b>Salgados</b></h4>
+                    <br>
+                    <label for="descricao">Descrição</label> <input id="descricao" required="required" type="text" placeholder="Nome do Salgado">
+                    <br><br>
+                    <label for="peso">Peso</label> <input id="peso" required="required" type="text" placeholder="Peso do Salgado">
+                    <br><br>
+                    <label for="preco">Preço</label> <input id="preco" required="required" type="text" placeholder="Preço do Salgado">
+                    <br><br>
+                    <label for="quantidade">Quantidade</label> <input id="quantidade" required="required" type="text" placeholder="Quantidade de Salgado">
+                    <br><br>
+                    <button type="submit">Enviar</button>
+                </form>
+                <br>
+
+                <form action="" method="post" id="opcaoSobremesa" style="display: none;">
+                    <h4><b>Sobrenesas</b></h4>
+                    <br><br>
+                    <label class="rotulo" for="descricao">Descrição</label> 
+                    <input class="texto" name="descricao" id="descricao" type="text" placeholder="Nome da sobremesa">
+                    <br><br>
+                    <label class="rotulo" for="preco">Preço</label> 
+                    <input class="texto" name="preco" id="preco" type="text" placeholder="Preço da sobremesa">
+                    <br><br>
+                    <label class="rotulo" for="quantidade">Quantidade</label> 
+                    <input class="texto" name="quantidade" id="quantidade" type="text" placeholder="Quantidade de sobremesa">
+                    <br><br>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div> 
+        </div> 
+    </div> 
+</main>
+<footer>
+    <div class="container"> 
+        <div class="rodape"> 
+            <div style="background-color: rgb(255, 255, 255);" class="col-md-12" > 
+                <p><strong>Projeto Integrador:</strong> UC15 Etapas 7 e 8 Atividade2</p> 
+            </div> 
+        </div>  
+    </div>
+</footer>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function inserirDados() {
+            
+            if (!document.getElementById("sobremesa").checked && !document.getElementById("salgados").checked) {
+                alert("Selecionar umas das opções acima!")
+            } else {
+                if (document.getElementById("sobremesa").checked) {
+                    document.getElementById("opcaoSobremesa").style.display = 'block';
+                    document.getElementById("opcaoSalgados").style.display = "none";
+                    
+                } else if (document.getElementById("salgados").checked) {
+                    document.getElementById("opcaoSalgados").style.display = "block";
+                    document.getElementById("opcaoSobremesa").style.display = "none";
+                    defineTotalPix(valor);
+                }
+            }
+
+        }
+</script>
+</body>
+</html>
