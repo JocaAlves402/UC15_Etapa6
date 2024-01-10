@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Salgados, comida, laches, fastfood.">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+    <title>Relatório de Vendas</title>
+    <style>
+        .col-md-8 {
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            width: 850px;
+            height: 490px;
+            margin-left: 120px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+        .menuRelatorio {
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            width: 350px;
+            height: 490px;
+            margin-left: 5px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+        ul {
+            color: #fff;
+        }
+        ul li{
+            width: 290px;
+        }
+        ul li a {
+            display: block;
+            text-decoration: none;
+            color: #000000;
+            opacity: 50%;
+            background: #d3e6e7;
+            padding: 5px;
+            border: 1px solid #ccc;
+       }
+       .relatorio {
+        display: flex;
+        margin-top: 45px;
+       }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="container"> 
+        <div class="cabecalho"> 
+            <div style="background-color: rgb(255, 255, 255);" class="col-md-6" > 
+                <p><img src="imagens/logo.png"width="200px"/></p> 
+            </div> 
+            <div style="background-color: rgb(255, 255, 255);" class="col-md-6"> 
+                <p><img src="imagens/IconeUsuario.png" width="30px"/><img src="imagens/iconeSaida.webp" width="60px"/></p> 
+            </div> 
+        </div> 
+    </div> 
+</header>
+<nav>
+    <div class="container"> 
+        <div class="menu"> 
+            <div style="background-color: rgb(255, 255, 255);" class="col-md-12"> 
+                <div class="dropdown"><a href="SN Salgados.html">Home</a></div>
+                <div class="dropdown"><a href="cadastroProdutos.html">Cadastrar Produtos</a></div> 
+                <div class="dropdown"><a href="#">Lista de Produtos</a></div>
+                <div class="dropdown"><a href="#">Relatório de Venda</a></div>
+            </div> 
+        </div>  
+    </div>
+</nav>
+<main>
+    <div class="container"> 
+        
+        <div class="relatorio">
+            <div style="background-color: rgb(255, 255, 255);" class="col-md-3" > 
+                
+                <div class="menuRelatorio">
+                    <h4>Menu Relatório</h4>
+                    <ul id="nav">
+                        <li><a href="#">Vendas de Salgados</a></li>
+                        <li><a href="#">Vendas de Sobremesas</a></li>
+                        <li><a href="#">Vendas por Mês</a>
+                        <li><a href="#">Média do ano</a></li>
+                    </ul>
+                </div>
+            </div> 
+            <div style="background-color: rgb(255, 255, 255);" class="col-md-8" > 
+                <h4>Tabela de Produtos</h4>
+                <table class="relatorioVendas">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Descrição</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="relatorioVendas">
+    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> 
+</main>
+<footer>
+    <div class="container"> 
+        <div class="rodape"> 
+            <div style="background-color: rgb(255, 255, 255);" class="col-md-12" > 
+                <p><strong>Projeto Integrador:</strong> UC15 Etapas 7 e 8 Atividade2</p> 
+            </div> 
+        </div>  
+    </div>
+</footer>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script>
+   
+</script>
+</body>
+</html>
